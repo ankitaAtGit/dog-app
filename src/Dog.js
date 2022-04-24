@@ -20,8 +20,8 @@ const Dog = (props) => {
     props.dogFetch();
   }
   return (
-    <div>
-      {dog.dog ? <img height={200} width={200} src={dog.dog} alt="dog" /> :
+    <div style={{ display: "flex", flexDirection: "column", gap: 100 }}>
+      {dog.dog ? <img className='App-logo' width={200} style={{ objectFit: "contain" }} src={dog.dog} alt="dog" /> :
         dog.fetching ? "fetching your doggo..." : dog.error ? <p style={{
           color: "red"
         }}>Ruff ruff, something's wrong!</p> : <p>Click the button to see a dog</p>}

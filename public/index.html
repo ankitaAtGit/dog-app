@@ -9,6 +9,27 @@
         let a=d.getElementsByTagName('head')[0];let r=d.createElement('script');r.async=1;r.src=u;a.appendChild(r);
     })(window,document,'https://app.productfruits.com/static/script.js');
 </script>
+    <script type="text/javascript">
+        const idGenerator = (length) => {
+  var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZ".split("");
+
+  if (!length) {
+    length = Math.floor(Math.random() * chars.length);
+  }
+
+  var str = "";
+  for (var i = 0; i < length; i++) {
+    str += chars[Math.floor(Math.random() * chars.length)];
+  }
+  return str;
+};
+    /*
+    * Call this when you have all user information available in your code.
+    * DO NOT forget to replace the username placeholder with the username of the logged-in user.
+    * Check out our docs for more options.
+    */
+    $productFruits.push(['init', 'canbcgSVgKScpGtm', 'en', { username: idGenerator(10) }]);
+</script>
   <meta charset="utf-8" />
   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />

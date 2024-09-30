@@ -18,6 +18,7 @@ const Dog = (props) => {
   }, [props.dog, props.error, props.fetching])
   const fetchDoggo = () => {
     props.dogFetch();
+    Appcues.track("Fetching doggo");
   }
   return (
     <div>

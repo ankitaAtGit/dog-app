@@ -21,12 +21,12 @@ const Dog = (props) => {
     window.Appcues?.track("Fetching doggo");
   }
   return (
-    <div>
+    <div class="dog-div">
       {dog.dog ? <img height={200} width={200} src={dog.dog} alt="dog" /> :
         dog.fetching ? "fetching your doggo..." : dog.error ? <p style={{
           color: "red"
         }}>Ruff ruff, something's wrong!</p> : <p>Click the button to see a dog</p>}
-      <button onClick={fetchDoggo}>Woof Woof!</button>
+      <button class="woof-woof" onClick={fetchDoggo}>Woof Woof!</button>
     </div>
   )
 }

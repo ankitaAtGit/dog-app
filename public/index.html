@@ -3,13 +3,6 @@
 
 <head>
     <script type="text/javascript">
-    (function(w,d,u){
-        w.$productFruits = w.$productFruits || [];
-        w.productFruits=w.productFruits||{ };w.productFruits.scrV='2';
-        let a=d.getElementsByTagName('head')[0];let r=d.createElement('script');r.async=1;r.src=u;a.appendChild(r);
-    })(window,document,'https://app.productfruits.com/static/script.js');
-</script>
-    <script type="text/javascript">
         const idGenerator = (length) => {
   var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZ".split("");
 
@@ -23,8 +16,36 @@
   }
   return str;
 };
-    $productFruits.push(['init', 'pAvpzil8WfxEKJau', 'en', { username: idGenerator(12) }]);
 </script>
+    <script type="text/javascript">
+  window.AppcuesSettings = { enableURLDetection: true };
+</script>
+<script src="//fast.appcues.com/218847.js"></script>
+    <script>
+    window.Appcues.identify(
+  idGenerator(12), // unique, required
+  {
+
+    // recommended (optional) properties
+
+    createdAt: 1566932390, // Unix timestamp of user signup date
+    purchasedAt: 1566932395, // Unix timestamp of account purchase date (leave null if empty)
+    planTier: "Standard", // Current user’s plan tier
+    role: "Admin", // Current user’s role or permissions
+    accountId: "1234", // Current user's account ID
+    firstName: "John", // current user's first name
+
+    // additional suggestions
+
+    companyName: "Acme Corp", // Current user’s company name
+    email: "john.doe@example.com", // Current user's email
+    location: "90210", // a zipcode, state, or country enables location-based targeting
+    version: "2.0", // users on different versions may need to see different content
+    language: "spanish", // for multi-language applications
+    renewalDate: 1577880288 // to remind users to renew
+  }
+);
+    </script>
   <meta charset="utf-8" />
   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
